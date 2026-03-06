@@ -1,7 +1,15 @@
-import countrydata from "../countrydata";
+import { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
 
 export default function CountryCardList({query}) {
+    const [countrydata,setCountryData]=useState([]);
+    useEffect(()=>{
+        fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,capital,region,subregion")
+        .then((res)=>res.json())
+        .then((data)=>{
+            setCountryData(data)
+        },[])
+    })
   return (
     <div className="countryCardList">
       {countrydata
