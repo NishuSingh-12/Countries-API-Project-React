@@ -96,3 +96,16 @@ select{
 .countryCard img{
     width: 100%;
 }
+/* Country card list style */
+.countryCardList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+@media (max-width:800px) {
+    .searchbar-and-dropmenu-container{
+        flex-direction: column;
+        gap: 24px;
+    }
+}
