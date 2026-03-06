@@ -72,3 +72,27 @@ select{
     transition:0.3s;
 }
 
+/* Country Card Style */
+.countryCard{
+    display: block;
+    text-decoration: none;
+    color: black;
+    max-width: 250px;
+    width: 100%;
+    margin-left: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.countryCard div{
+    padding: 14px;
+    line-height: 2rem;
+}
+.countryCard p{
+    font-weight: bold;
+}
+.countryCard p span{
+    color: rgba(0, 0, 0, 0.559);
+}
+.countryCard img{
+    width: 100%;
+}
