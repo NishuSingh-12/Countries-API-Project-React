@@ -103,6 +103,12 @@ select{
     gap: 20px;
     justify-content: center;
 }
+/* Error component style */
+.error-msg{
+    text-align: center;
+    margin-top: 8rem;
+    color: red;
+}
 @media (max-width:800px) {
     .searchbar-and-dropmenu-container{
         flex-direction: column;
