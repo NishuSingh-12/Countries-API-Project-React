@@ -19,6 +19,7 @@ export default function CountryDetail() {
         capital: data.capital.join(", "),
         tld: data.tld,
         flag: data.flags.svg,
+        borders: data.borders.join(", "),
         languages: Object.values(data.languages).join(", "),
         currencies: Object.values(data.currencies)
         .map((currency)=> currency.name)
