@@ -136,9 +136,12 @@ select{
  margin-bottom: 24px;
 }
 .country-detail-content p{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 2.5rem;
+}
+.country-detail-content p span{
+    color: rgba(0, 0, 0, 0.559);
 }
 .image-container{
     max-width: 500px;
