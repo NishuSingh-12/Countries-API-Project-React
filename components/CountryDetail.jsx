@@ -41,7 +41,7 @@ export default function CountryDetail() {
   return (
 countryData === null? "Loading....":  (
     <main className="country-detail-container">
-      <a href="#" className="back-btn">&#8592; Back</a>
+      <a href="#" onClick={()=>history.back()} className="back-btn"><i className="fa-solid fa-arrow-left"></i> Back</a>
         <div className="country-detail-content">
          <div className="image-container">
             <img src={countryData.flag} alt={`${countryData.name} flag`} />
