@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 export default function CountryDetail() {
-  const countryName = new URLSearchParams(location.search).get('name');
+  const params = useParams();
+  console.log(params);
+  
+  const countryName = params.country;
   const [countryData,setCountryData]=useState(null);
+  const [notFound,setNotFound]=useState(false)
 
   useEffect(()=>{
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
@@ -25,8 +30,14 @@ export default function CountryDetail() {
         .map((currency)=> currency.name)
         .join(', '),
       })     
-    });
+    }).catch(err =>{
+      console.log(err)
+      setNotFound(true)
+    })
   },[])
+  if(notFound){
+    return <div>Country not found</div>
+  }
   return (
 countryData === null? "Loading....":  (
     <main className="country-detail-container">
