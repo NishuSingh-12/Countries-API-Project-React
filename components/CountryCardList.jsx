@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
+import CountryCardListShimmer from "./CountryCardListShimmer";
 
 export default function CountryCardList({query}) {
     const [countrydata,setCountryData]=useState([]);
@@ -11,7 +12,13 @@ export default function CountryCardList({query}) {
         },[])
     })
   return (
-    <div className="countryCardList">
+   <>
+  
+  {
+    !countrydata.length ? (
+      <CountryCardListShimmer/>
+    ) :(
+        <div className="countryCardList">
       {countrydata
       .filter((country)=>country.name.common.toLowerCase().includes(query.toLowerCase())
     )
@@ -26,6 +33,9 @@ export default function CountryCardList({query}) {
         />
       ))}
     </div>
+    )
+  }
+   </>
   );
 }
 

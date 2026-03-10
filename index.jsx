@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
 import Error from "./components/Error";
 import CountryDetail from "./components/CountryDetail";
-import Contact from "./components/Contact";
 
 const router = createBrowserRouter([
   {
@@ -17,10 +16,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home/>,
       },
-      {
-        path: "/contact",
-        element: <Contact/>,
-      },
+      
         {
         path: "/:country",
         element: <CountryDetail/>,
