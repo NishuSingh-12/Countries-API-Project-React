@@ -4,6 +4,7 @@ import CountryCardListShimmer from "./CountryCardListShimmer";
 
 export default function CountryCardList({query}) {
     const [countrydata,setCountryData]=useState([]);
+    console.log(countrydata)
     useEffect(()=>{
         fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,capital,region,subregion")
         .then((res)=>res.json())
@@ -20,7 +21,7 @@ export default function CountryCardList({query}) {
     ) :(
         <div className="countryCardList">
       {countrydata
-      .filter((country)=>country.name.common.toLowerCase().includes(query.toLowerCase())
+      .filter((country)=>country.name.common.toLowerCase().includes(query) || country.region.toLowerCase().includes(query) 
     )
       .map((country, i) => (
         <CountryCard

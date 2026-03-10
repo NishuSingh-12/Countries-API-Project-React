@@ -10,7 +10,7 @@ export default function Home() {
     <main>
           <div className="searchbar-and-dropmenu-container">
             <SearchBar setQuery={setQuery}/>
-            <DropDownMenu />
+            <DropDownMenu setQuery={setQuery}/>
           </div>
         <CountryCardList query={query}/>
     </main>
