@@ -9,8 +9,8 @@ export default function CountryCardList({query}) {
         .then((res)=>res.json())
         .then((data)=>{
             setCountryData(data)
-        },[])
-    })
+        })
+    },[])
   return (
    <>
   
@@ -30,6 +30,7 @@ export default function CountryCardList({query}) {
           population={country.population}
           region={country.region}
           capital={country.capital?.[0]}
+          data = {country}
         />
       ))}
     </div>
