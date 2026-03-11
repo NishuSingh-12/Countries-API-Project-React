@@ -42,7 +42,6 @@ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 
      padding: 10px 48px;
 }
 .header div p{
-    font-size: 18px;
     color: var(--text-color);
     cursor: pointer;
 }
@@ -221,5 +220,29 @@ select{
     font-size: 16px;
     font-weight: bold;
     line-height: 1.5rem;
+}
+}
+@media(max-width:550px){
+    .header div{
+    background-color: var(--background-color);
+     padding: 8px;
+}
+    .header div p span{
+        font-size: 12px;
+    }
+    .header h2{
+        font-size: 18px;
+    }
+    .countryCard{
+    display: block;
+    text-decoration: none;
+    color: black;
+    max-width: 350;
+    width: 100%;
+    margin-left: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--elements-color);
+    color: var(--text-color);
 }
 }
