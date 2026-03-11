@@ -5,6 +5,25 @@ The project includes search functionality, shimmer loading effect, and light/dar
 
 This project demonstrates API integration, React state management, UI loading states, and theme switching.
 
+## 🔗 GitHub Repository
+
+[View Source Code](https://github.com/NishuSingh-12/Countries-API-Project-React)
+
+## 🌐 Live Demo
+
+(https://countries-api-projectt.netlify.app/)
+
+## 📸 Screenshots
+
+### Home Page
+![Home](Screenshots/HomePage.png)
+
+### Dark Mode
+![Dark Mode](Screenshots/DarkMode.png)
+
+### Country Detail Page
+![Detail](Screenshots/DetailPage.png)
+
 ## 🚀 Features
 
 🌎 Display list of countries from API
